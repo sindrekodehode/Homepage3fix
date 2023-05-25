@@ -1,0 +1,276 @@
+body {
+  color: rgba(64, 27, 197, 0.625);
+  text-shadow: 0 0 5px whitesmoke;
+  text-align: center;
+  background-image: linear-gradient(darkblue, rgb(14, 14, 14));
+  font-family: "MedievalSharp", cursive;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+a {
+  color: aqua;
+  text-decoration: none;
+  background-color: rgba(64, 27, 197, 0.625);
+  border-radius: 5px;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "crab1 crab2 crab3"
+    "crab4 crab5 crab6"
+    "crab7 crab8 crab9"
+    "footer1 footer2 footer2";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 300px 300px 300px 300px 300px;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#head {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 150px;
+  grid-area: 1 / 3;
+  z-index: 1;
+}
+
+#banner {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/giphy.gif);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab1 {
+  grid-area: crab1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/calappa.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab2 {
+  grid-area: crab2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/spidercrab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab3 {
+  grid-area: crab3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/porcrab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab4 {
+  grid-area: crab4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/norwaykcrab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab5 {
+  grid-area: crab5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/tgcrab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab6 {
+  grid-area: crab6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/edcrab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab7 {
+  grid-area: crab7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/lobster.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab8 {
+  grid-area: crab8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/hcrab.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#crab9 {
+  grid-area: crab9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/eocarcinus.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#credits {
+  grid-area: footer1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 300px;
+  text-shadow: 0 0 1px whitesmoke;
+}
+
+#contact {
+  grid-area: footer2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 300px;
+  text-shadow: 0 0 1px whitesmoke;
+}
+
+@counter-style emoji-bullets {
+  symbols: "\1f980";
+  system: cyclic;
+  suffix: " ";
+}
+
+#contact li {
+  list-style-type: emoji-bullets;
+}
+
+#credits li {
+  list-style-type: emoji-bullets;
+}
+
+#contact h2 {
+  border-bottom: 2px solid whitesmoke;
+}
+
+#credits h2 {
+  border-bottom: 2px solid whitesmoke;
+}
+
+#infodrop ul,
+#infodrop li {
+  margin: 0;
+  padding: 0;
+}
+
+#infodrop ul {
+  display: inline;
+  background: rgba(0, 0, 139, 0);
+  list-style: none;
+  width: 100%;
+}
+
+#infodrop li {
+  float: left;
+  position: relative;
+  width: auto;
+  margin: 2px;
+}
+
+#infodrop a {
+  display: block;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+#infodrop li:hover a {
+  background: darkblue;
+}
+
+#subinfo {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+
+#subpers {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+
+#subcont {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+
+#infodrop ul:hover ul#subinfo {
+  opacity: 1 !important;
+  top: 105px;
+  left: 60rem;
+  max-width: fit-content;
+  visibility: visible !important;
+}
+
+#infodrop ul:hover ul#subpers {
+  opacity: 1 !important;
+  top: 105px;
+  left: 64rem;
+  max-width: fit-content;
+  visibility: visible !important;
+}
+
+#infodrop ul:hover ul#subcont {
+  opacity: 1 !important;
+  top: 105px;
+  left: 55rem;
+  max-width: fit-content;
+  visibility: visible !important;
+}
